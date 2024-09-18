@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parse XLSX File</title>
+  </head>
+  <body>
+    <input type="file" id="file-input" accept=".xlsx" />
+    <button type="button" id="parse-button">Parse</button>
+
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <script>
+      const fileInput = document.getElementById('file-input');
+      const parseButton = document.getElementById('parse-button');
+
+      parseButton.addEventListener('click', () => {
+        const file = fileInput.files[0];
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const data = e.target.result;
+          const workbook = XLSX.read(data, { type: 'array' });
+
+          const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+          const cellValue = worksheet['A1'].v;
+
+          console.log(cellValue);
+        };
+
+        reader.readAsArrayBuffer(file);
+      });
+    </script>
+  </body>
+</html>
