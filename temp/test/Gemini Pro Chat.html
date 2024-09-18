@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://gemini.fireworkor.top/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <link rel="icon" type="image/svg+xml" href="https://gemini.fireworkor.top/icon.svg">
+    <link rel="apple-touch-icon" href="https://gemini.fireworkor.top/apple-touch-icon.png" sizes="180x180">
+    <link rel="mask-icon" href="https://gemini.fireworkor.top/icon.svg" color="#FFFFFF">
+    <meta name="theme-color" content="#212129">
+    <meta name="generator" content="Astro v2.7.0">
+    <title>Gemini Pro Chat</title>
+    <meta name="description" content="A Minimal web UI for GeminiPro Chat.">
+
+    <link rel="manifest" href="https://gemini.fireworkor.top/manifest.webmanifest">
+    <script id="vite-plugin-pwa:inline-sw">if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/sw.js', { scope: '/' })})}</script>
+  <link rel="stylesheet" href="Gemini%20Pro%20Chat_files/index.378d3464.css">
+<link rel="stylesheet" href="Gemini%20Pro%20Chat_files/index.5709347a.css"><script type="module" src="Gemini%20Pro%20Chat_files/hoisted.8bdc4fc1.js.下载"></script><style type="text/css">.cyxy-trs-target.colored {
+  background-color: rgba(0, 185, 119, 0.05);
+}
+
+.cyxy-target-popup {
+  padding: 1.3rem 12px;
+  position: absolute;
+  display: -webkit-flex;
+  display: inline-flex;
+  flex-direction: row;
+  overflow: scroll;
+  vertical-align: middle;
+  z-index: 199099;
+  top: 1px;
+  left: 1px;
+  background: #fff;
+  opacity: 0.98;
+  /*margin: 0px 5%;*/
+  height: auto;
+  width: auto;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  /*height: 7rem;*/
+}
+
+@media (max-width: 468px) {
+  .cyxy-target-popup {
+    /*width: 90%;*/
+    /*margin: 0px 5%;*/
+    left: 10%;
+    /*right: 5%;*/
+    /*width: 30rem;*/
+    /*height: 14.58rem;*/
+  }
+}
+
+#cyxy-popup-left-slide {
+  height: 22px;
+  display: inline;
+  vertical-align: middle;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+#cyxy-popup-right-slide {
+  height: 22px;
+  display: inline;
+  vertical-align: middle;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+#cyxy-popup-userinfo {
+  display: inline;
+}
+
+.cyxy-target-count {
+  display: inline;
+  vertical-align: middle;
+  font-size: 10px;
+}
+
+#cyxy-popup-avatar {
+  /*margin-right: 30px;*/
+  /*font-size: 14px;*/
+  display: inline;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 16px;
+}
+
+#cyxy-popup-name-time {
+  display: -webkit-flex;
+  display: inline-flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  /*position: relative;*/
+  vertical-align: middle;
+  text-align: left;
+  margin-left: 6px;
+}
+
+#cyxy-popup-name {
+  /*vertical-align: middle;*/
+  /*display: flex;*/
+  font-size: 14px;
+  color: #333;
+  height: 18px;
+  overflow: hidden;
+  max-width: 84px;
+}
+
+#cyxy-popup-time {
+  /*margin-right: 30px;*/
+  /*font-size: 14px;*/
+  /*display: flex;*/
+  font-size: 12px;
+  margin-top: 4px;
+  color: #999;
+}
+
+.cyxy-footer {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  padding: 0px 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0.9;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 2px;
+  z-index: 201712;
+  text-align: center;
+}
+
+.cyxy-footer-p {
+  padding: 12px 0px;
+  margin: 0px;
+  font-size: 12px;
+  color: #333;
+  background: #fff;
+  text-align: center;
+  line-height: 1.6;
+  font-weight: 200;
+}
+
+#cyxy-popup-favour {
+  text-align: center;
+  display: inline;
+  margin-right: 20px;
+  margin-left: 46px;
+  cursor: pointer;
+}
+
+#cyxy-popup-favour.commit {
+  /*padding: 2px 6px;*/
+  /*border: 1px solid #00B977;*/
+  /*border-radius: 4px;*/
+}
+
+#cyxy-popup-oppose {
+  text-align: center;
+  display: inline;
+  cursor: pointer;
+}
+
+#cyxy-popup-favour-img {
+  display: inline;
+  height: 20px;
+  /*width: 22px;*/
+  vertical-align: middle;
+}
+
+#cyxy-popup-favour-img.commit {
+  /*height: 22px;*/
+  /*vertical-align: middle;*/
+}
+
+#cyxy-popup-oppose-img {
+  display: inline;
+  height: 18px;
+  vertical-align: middle;
+}
+
+#cyxy-popup-favour-num {
+  font-size: 14px;
+  margin-left: 4px;
+  /*margin-left: 0.47rem;*/
+  color: #999999;
+}
+
+#cyxy-popup-oppose-num {
+  font-size: 14px;
+  margin-left: 4px;
+  /*margin-left: 0.47rem;*/
+  color: #999;
+}
+
+.caption-window.ytp-caption-window-bottom {
+  width: 800px;
+  /* height: 100px; */
+  /* margin-left: -400px; */
+}
+
+@media (max-width: 320px) {
+  #cyxy-popup-favour {
+    margin-right: 0.8rem;
+    margin-left: 1.5rem;
+  }
+
+  #cyxy-popup-left-slide {
+    margin-right: 0.8rem;
+  }
+
+  #cyxy-popup-right-slide {
+    margin-left: 1rem;
+  }
+}
+
+.login-hint-a {
+  border-bottom: none;
+  display: block;
+  color: #999;
+  font-size: 10px;
+}
+
+.login-hint-a:visited {
+  color: #999;
+}
+
+.layui-m-layer {
+  color: #333;
+  position: relative;
+  z-index: 2147483647;
+}
+
+.layui-m-layer * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.layui-m-layermain,
+.layui-m-layershade {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layui-m-layershade {
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: auto;
+}
+
+.layui-m-layermain {
+  display: table;
+  font-family: Helvetica, arial, sans-serif;
+  pointer-events: none;
+}
+
+.layui-m-layermain .layui-m-layersection {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.layui-m-layerchild {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+}
+
+@-webkit-keyframes layui-m-anim-scale {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes layui-m-anim-scale {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.layui-m-anim-scale {
+  animation-name: layui-m-anim-scale;
+  -webkit-animation-name: layui-m-anim-scale;
+}
+
+@-webkit-keyframes layui-m-anim-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(800px);
+    transform: translateY(800px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes layui-m-anim-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(800px);
+    transform: translateY(800px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.layui-m-anim-up {
+  -webkit-animation-name: layui-m-anim-up;
+  animation-name: layui-m-anim-up;
+}
+
+.layui-m-layer0 .layui-m-layerchild {
+  width: 90%;
+  max-width: 640px;
+}
+
+.layui-m-layer1 .layui-m-layerchild {
+  border: none;
+  border-radius: 0;
+}
+
+.layui-m-layer2 .layui-m-layerchild {
+  width: auto;
+  max-width: 260px;
+  min-width: 40px;
+  border: none;
+  background: 0 0;
+  box-shadow: none;
+  color: #fff;
+}
+
+.layui-m-layerchild h3 {
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+}
+
+.layui-m-layerbtn span,
+.layui-m-layerchild h3 {
+  margin: 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.layui-m-layercont {
+  padding: 50px 30px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.layui-m-layer1 .layui-m-layercont {
+  padding: 0;
+  text-align: left;
+}
+
+.layui-m-layer2 .layui-m-layercont {
+  text-align: center;
+  padding: 0;
+  line-height: 0;
+}
+
+.layui-m-layer2 .layui-m-layercont i {
+  width: 25px;
+  height: 25px;
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: layui-m-anim-loading 1.4s infinite ease-in-out;
+  animation: layui-m-anim-loading 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.layui-m-layerbtn,
+.layui-m-layerbtn span {
+  position: relative;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+}
+
+.layui-m-layer2 .layui-m-layercont p {
+  margin-top: 20px;
+}
+
+@-webkit-keyframes layui-m-anim-loading {
+  0%,
+  100%,
+  80% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes layui-m-anim-loading {
+  0%,
+  100%,
+  80% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+.layui-m-layer2 .layui-m-layercont i:first-child {
+  margin-left: 0;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.layui-m-layer2 .layui-m-layercont i.layui-m-layerload {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.layui-m-layer2 .layui-m-layercont > div {
+  line-height: 22px;
+  padding-top: 7px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.layui-m-layerbtn {
+  display: box;
+  display: -moz-box;
+  display: -webkit-box;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 0;
+  border-top: 1px solid #d0d0d0;
+  background-color: #f2f2f2;
+}
+
+.layui-m-layerbtn span {
+  display: block;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.layui-m-layerbtn span[yes] {
+  color: #40affe;
+}
+
+.layui-m-layerbtn span[no] {
+  border-right: 1px solid #d0d0d0;
+  border-radius: 0 0 0 5px;
+}
+
+.layui-m-layerbtn span:active {
+  background-color: #f6f6f6;
+}
+
+.layui-m-layerend {
+  position: absolute;
+  right: 7px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  font-weight: 400;
+  background: 0 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-size: 30px;
+}
+
+.layui-m-layerend::after,
+.layui-m-layerend::before {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  content: "";
+  width: 18px;
+  height: 1px;
+  background-color: #999;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border-radius: 3px;
+}
+
+.layui-m-layerend::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.layui-m-layer .layui-m-layer-footer {
+  position: fixed;
+  width: 95%;
+  max-width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  background: 0 0;
+}
+
+.layui-m-layer-footer .layui-m-layercont {
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.layui-m-layer-footer .layui-m-layerbtn {
+  display: block;
+  height: auto;
+  background: 0 0;
+  border-top: none;
+}
+
+.layui-m-layer-footer .layui-m-layerbtn span {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.layui-m-layer-footer .layui-m-layerbtn span[no] {
+  color: #fd482c;
+  border-top: 1px solid #c2c2c2;
+  border-radius: 0 0 5px 5px;
+}
+
+.layui-m-layer-footer .layui-m-layerbtn span[yes] {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.layui-m-layer .layui-m-layer-msg {
+  width: auto;
+  max-width: 90%;
+  margin: 0 auto;
+  bottom: -150px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.layui-m-layer-msg .layui-m-layercont {
+  padding: 10px 20px;
+}
+
+.collection-success {
+  /*opacity: 0.6;*/
+  /*background: #EAEAEA;*/
+  color: #ffffff;
+}
+.collection-success:hover {
+  /*opacity: 0.45;*/
+  /*background: #000000;*/
+  color: #ffffff;
+}
+.layui-m-layercont .cyxy-trs-target {
+  display: none;
+}
+.collection-icon {
+  width: 12px;
+  height: 13px;
+  background: url("data:image/png;base64,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")
+    no-repeat;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+}
+.collection-success > a {
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.cy_free_box {
+  position: relative;
+}
+.cy_free_box img {
+  width: 100%;
+  cursor: pointer;
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+.layui-m-layer-cy_free_content {
+  background: inherit !important;
+}
+</style><style type="text/css">.cyxy-trs-target.colored {
+  background-color: rgba(0, 185, 119, 0.05);
+}
+
+.cyxy-target-popup {
+  padding: 1.3rem 12px;
+  position: absolute;
+  display: -webkit-flex;
+  display: inline-flex;
+  flex-direction: row;
+  overflow: scroll;
+  vertical-align: middle;
+  z-index: 199099;
+  top: 1px;
+  left: 1px;
+  background: #fff;
+  opacity: 0.98;
+  /*margin: 0px 5%;*/
+  height: auto;
+  width: auto;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  /*height: 7rem;*/
+}
+
+@media (max-width: 468px) {
+  .cyxy-target-popup {
+    /*width: 90%;*/
+    /*margin: 0px 5%;*/
+    left: 10%;
+    /*right: 5%;*/
+    /*width: 30rem;*/
+    /*height: 14.58rem;*/
+  }
+}
+
+#cyxy-popup-left-slide {
+  height: 22px;
+  display: inline;
+  vertical-align: middle;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+#cyxy-popup-right-slide {
+  height: 22px;
+  display: inline;
+  vertical-align: middle;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+#cyxy-popup-userinfo {
+  display: inline;
+}
+
+.cyxy-target-count {
+  display: inline;
+  vertical-align: middle;
+  font-size: 10px;
+}
+
+#cyxy-popup-avatar {
+  /*margin-right: 30px;*/
+  /*font-size: 14px;*/
+  display: inline;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 16px;
+}
+
+#cyxy-popup-name-time {
+  display: -webkit-flex;
+  display: inline-flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  /*position: relative;*/
+  vertical-align: middle;
+  text-align: left;
+  margin-left: 6px;
+}
+
+#cyxy-popup-name {
+  /*vertical-align: middle;*/
+  /*display: flex;*/
+  font-size: 14px;
+  color: #333;
+  height: 18px;
+  overflow: hidden;
+  max-width: 84px;
+}
+
+#cyxy-popup-time {
+  /*margin-right: 30px;*/
+  /*font-size: 14px;*/
+  /*display: flex;*/
+  font-size: 12px;
+  margin-top: 4px;
+  color: #999;
+}
+
+.cyxy-footer {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  padding: 0px 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0.9;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 2px;
+  z-index: 201712;
+  text-align: center;
+}
+
+.cyxy-footer-p {
+  padding: 12px 0px;
+  margin: 0px;
+  font-size: 12px;
+  color: #333;
+  background: #fff;
+  text-align: center;
+  line-height: 1.6;
+  font-weight: 200;
+}
+
+#cyxy-popup-favour {
+  text-align: center;
+  display: inline;
+  margin-right: 20px;
+  margin-left: 46px;
+  cursor: pointer;
+}
+
+#cyxy-popup-favour.commit {
+  /*padding: 2px 6px;*/
+  /*border: 1px solid #00B977;*/
+  /*border-radius: 4px;*/
+}
+
+#cyxy-popup-oppose {
+  text-align: center;
+  display: inline;
+  cursor: pointer;
+}
+
+#cyxy-popup-favour-img {
+  display: inline;
+  height: 20px;
+  /*width: 22px;*/
+  vertical-align: middle;
+}
+
+#cyxy-popup-favour-img.commit {
+  /*height: 22px;*/
+  /*vertical-align: middle;*/
+}
+
+#cyxy-popup-oppose-img {
+  display: inline;
+  height: 18px;
+  vertical-align: middle;
+}
+
+#cyxy-popup-favour-num {
+  font-size: 14px;
+  margin-left: 4px;
+  /*margin-left: 0.47rem;*/
+  color: #999999;
+}
+
+#cyxy-popup-oppose-num {
+  font-size: 14px;
+  margin-left: 4px;
+  /*margin-left: 0.47rem;*/
+  color: #999;
+}
+
+.caption-window.ytp-caption-window-bottom {
+  width: 800px;
+  /* height: 100px; */
+  /* margin-left: -400px; */
+}
+
+@media (max-width: 320px) {
+  #cyxy-popup-favour {
+    margin-right: 0.8rem;
+    margin-left: 1.5rem;
+  }
+
+  #cyxy-popup-left-slide {
+    margin-right: 0.8rem;
+  }
+
+  #cyxy-popup-right-slide {
+    margin-left: 1rem;
+  }
+}
+
+.login-hint-a {
+  border-bottom: none;
+  display: block;
+  color: #999;
+  font-size: 10px;
+}
+
+.login-hint-a:visited {
+  color: #999;
+}
+
+.layui-m-layer {
+  color: #333;
+  position: relative;
+  z-index: 2147483647;
+}
+
+.layui-m-layer * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.layui-m-layermain,
+.layui-m-layershade {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layui-m-layershade {
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: auto;
+}
+
+.layui-m-layermain {
+  display: table;
+  font-family: Helvetica, arial, sans-serif;
+  pointer-events: none;
+}
+
+.layui-m-layermain .layui-m-layersection {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.layui-m-layerchild {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+}
+
+@-webkit-keyframes layui-m-anim-scale {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes layui-m-anim-scale {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.layui-m-anim-scale {
+  animation-name: layui-m-anim-scale;
+  -webkit-animation-name: layui-m-anim-scale;
+}
+
+@-webkit-keyframes layui-m-anim-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(800px);
+    transform: translateY(800px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes layui-m-anim-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(800px);
+    transform: translateY(800px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.layui-m-anim-up {
+  -webkit-animation-name: layui-m-anim-up;
+  animation-name: layui-m-anim-up;
+}
+
+.layui-m-layer0 .layui-m-layerchild {
+  width: 90%;
+  max-width: 640px;
+}
+
+.layui-m-layer1 .layui-m-layerchild {
+  border: none;
+  border-radius: 0;
+}
+
+.layui-m-layer2 .layui-m-layerchild {
+  width: auto;
+  max-width: 260px;
+  min-width: 40px;
+  border: none;
+  background: 0 0;
+  box-shadow: none;
+  color: #fff;
+}
+
+.layui-m-layerchild h3 {
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+}
+
+.layui-m-layerbtn span,
+.layui-m-layerchild h3 {
+  margin: 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.layui-m-layercont {
+  padding: 50px 30px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.layui-m-layer1 .layui-m-layercont {
+  padding: 0;
+  text-align: left;
+}
+
+.layui-m-layer2 .layui-m-layercont {
+  text-align: center;
+  padding: 0;
+  line-height: 0;
+}
+
+.layui-m-layer2 .layui-m-layercont i {
+  width: 25px;
+  height: 25px;
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: layui-m-anim-loading 1.4s infinite ease-in-out;
+  animation: layui-m-anim-loading 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.layui-m-layerbtn,
+.layui-m-layerbtn span {
+  position: relative;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+}
+
+.layui-m-layer2 .layui-m-layercont p {
+  margin-top: 20px;
+}
+
+@-webkit-keyframes layui-m-anim-loading {
+  0%,
+  100%,
+  80% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes layui-m-anim-loading {
+  0%,
+  100%,
+  80% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+.layui-m-layer2 .layui-m-layercont i:first-child {
+  margin-left: 0;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.layui-m-layer2 .layui-m-layercont i.layui-m-layerload {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.layui-m-layer2 .layui-m-layercont > div {
+  line-height: 22px;
+  padding-top: 7px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.layui-m-layerbtn {
+  display: box;
+  display: -moz-box;
+  display: -webkit-box;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 0;
+  border-top: 1px solid #d0d0d0;
+  background-color: #f2f2f2;
+}
+
+.layui-m-layerbtn span {
+  display: block;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.layui-m-layerbtn span[yes] {
+  color: #40affe;
+}
+
+.layui-m-layerbtn span[no] {
+  border-right: 1px solid #d0d0d0;
+  border-radius: 0 0 0 5px;
+}
+
+.layui-m-layerbtn span:active {
+  background-color: #f6f6f6;
+}
+
+.layui-m-layerend {
+  position: absolute;
+  right: 7px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  font-weight: 400;
+  background: 0 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-size: 30px;
+}
+
+.layui-m-layerend::after,
+.layui-m-layerend::before {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  content: "";
+  width: 18px;
+  height: 1px;
+  background-color: #999;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border-radius: 3px;
+}
+
+.layui-m-layerend::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.layui-m-layer .layui-m-layer-footer {
+  position: fixed;
+  width: 95%;
+  max-width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  background: 0 0;
+}
+
+.layui-m-layer-footer .layui-m-layercont {
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.layui-m-layer-footer .layui-m-layerbtn {
+  display: block;
+  height: auto;
+  background: 0 0;
+  border-top: none;
+}
+
+.layui-m-layer-footer .layui-m-layerbtn span {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.layui-m-layer-footer .layui-m-layerbtn span[no] {
+  color: #fd482c;
+  border-top: 1px solid #c2c2c2;
+  border-radius: 0 0 5px 5px;
+}
+
+.layui-m-layer-footer .layui-m-layerbtn span[yes] {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.layui-m-layer .layui-m-layer-msg {
+  width: auto;
+  max-width: 90%;
+  margin: 0 auto;
+  bottom: -150px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.layui-m-layer-msg .layui-m-layercont {
+  padding: 10px 20px;
+}
+
+.collection-success {
+  /*opacity: 0.6;*/
+  /*background: #EAEAEA;*/
+  color: #ffffff;
+}
+.collection-success:hover {
+  /*opacity: 0.45;*/
+  /*background: #000000;*/
+  color: #ffffff;
+}
+.layui-m-layercont .cyxy-trs-target {
+  display: none;
+}
+.collection-icon {
+  width: 12px;
+  height: 13px;
+  background: url("data:image/png;base64,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")
+    no-repeat;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+}
+.collection-success > a {
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.cy_free_box {
+  position: relative;
+}
+.cy_free_box img {
+  width: 100%;
+  cursor: pointer;
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+.layui-m-layer-cy_free_content {
+  background: inherit !important;
+}
+</style></head>
+  <body class="vsc-initialized">
+
+  <main>
+    <header>
+  <div class="fb items-center">
+    <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>70 Basic icons by Xicons.co</title><path d="M43,4H5A4,4,0,0,0,1,8V33a4,4,0,0,0,4,4H16l6.38,8.78a2,2,0,0,0,3.23,0L32,37H43a4,4,0,0,0,4-4V8A4,4,0,0,0,43,4Z" fill="#f9da97"></path><path d="M24,18H10a2,2,0,0,1,0-4H24A2,2,0,0,1,24,18Z" fill="#f6c253"></path><path d="M39,27H10a2,2,0,0,1,0-4H39A2,2,0,0,1,39,27Z" fill="#f6c253"></path></g></svg>
+    <div id="themeToggle" class="flex items-center justify-center w-10 h-10 rounded-md transition-colors hover:bg-slate/10 astro-KXYEDVG6">
+  <svg class="theme_toggle_svg astro-KXYEDVG6" width="1.2em" height="1.2em" viewBox="0 0 24 24" color="#858585" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+    <mask id="myMask" class="astro-KXYEDVG6">
+      <rect x="0" y="0" width="100%" height="100%" fill="white" class="astro-KXYEDVG6"></rect>
+      <circle class="theme_toggle_circle1 astro-KXYEDVG6" fill="black" cx="100%" cy="0%" r="5"></circle>
+    </mask>
+    <circle class="theme_toggle_circle2 astro-KXYEDVG6" cx="12" cy="12" fill="#858585" mask="url(#myMask)" r="5"></circle>
+    <g class="theme_toggle_g astro-KXYEDVG6" stroke="currentColor" opacity="1">
+      <line x1="12" y1="1" x2="12" y2="3" class="astro-KXYEDVG6"></line>
+      <line x1="12" y1="21" x2="12" y2="23" class="astro-KXYEDVG6"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" class="astro-KXYEDVG6"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" class="astro-KXYEDVG6"></line>
+      <line x1="1" y1="12" x2="3" y2="12" class="astro-KXYEDVG6"></line>
+      <line x1="21" y1="12" x2="23" y2="12" class="astro-KXYEDVG6"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" class="astro-KXYEDVG6"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" class="astro-KXYEDVG6"></line>
+    </g>
+  </svg>
+</div>
+  </div>
+  <div class="fi mt-2">
+    <span class="gpt-title">Gemini Pro</span>
+    <span class="gpt-subtitle">Chat</span>
+  </div>
+  <p mt-1="" op-60="">Based on Gemini Pro API.</p>
+</header>
+    <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var c;{let d={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,r)=>{if(t===""||!Array.isArray(r))return r;let[e,n]=r;return e in d?d[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(c=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{var l;if(!this.hydrator||!this.isConnected||(l=this.parentElement)!=null&&l.closest("astro-island[ssr]"))return;let r=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(let s of n){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove())}for(let s of r){let i=s.closest(this.tagName);!i||!i.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML)}let a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let r=this.getAttribute("before-hydration-url");r&&await import(r),this.start()}start(){let r=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{let n=this.getAttribute("renderer-url"),[a,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),s=this.getAttribute("component-export")||"default";if(!s.includes("."))this.Component=a[s];else{this.Component=a;for(let i of s.split("."))this.Component=this.Component[i]}return this.hydrator=l,this.hydrate},r,this)}attributeChangedCallback(){this.hydrate()}},c.observedAttributes=["props"],c))}})();</script><astro-island uid="ZgyFXl" data-solid-render-id="s0" component-url="/_astro/Generator.cf09d16f.js" component-export="default" renderer-url="/_astro/client.0e663382.js" props="{}" client="load" opts="{&quot;name&quot;:&quot;Generator&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0" my-6=""><!--#--><div class="py-2 -mx-4 px-4 transition-colors md:hover:bg-slate/3"><div class="flex gap-3 rounded-lg op-75"><div class="shrink-0 w-7 h-7 mt-4 rounded-full op-80 bg-gradient-to-r from-purple-400 to-yellow-400"></div><div class="message prose break-words overflow-hidden"><p>考核要求：<br>
+1、安装一台虚拟机，操作系统为centos 8-stream，网卡选择nat模式，内存、cpu、磁盘大小可自行设置。安装后，关闭此虚拟机，以此虚拟机为模板克隆两台虚拟机hostA，hostB。（5）<br>
+2、给hostA主机添加一块大小为20G的硬盘，对此硬盘进行分区，使用GPT分区表，分区1大小为2G（类型为Linux swap），分区2大小为4G（类型为Linux LVM），分区3使用剩余所有空间（类型为Linux LVM）。（5分）<br>
+3、hostA主机使用分区1为系统增加交换分区的大小，并实现持久挂载。（5分）<br>
+4、hostA主机使用分区2创建卷组vg1，然后创建逻辑卷lv1，大小为2G。（5分）<br>
+5、hostA主机创建目录/mount_dir，将逻辑卷lv1格式化为xfs，挂载至/mount_dir目录，并配置持久挂载，并在/mount_dir目录中创建文件，验证目录可写。（10分）<br>
+6、hostA主机使用分区3的所有空间为系统根分区扩容。（10分）<br>
+7、将hostA、hostB的主机名分别配置为serverX和clientX，网段使用nat模式的网段（掩码24，如192.168.1.0/24），配置serverX地址最后一段为100，clientX地址最后一段为200（如192.168.1.100/24,192.168.1.200/24）；网关和dns根据实际情况自行配置，能通外网即可。（5分）<br>
+注：X为学号后两位<br>
+8、在两台主机上配置hostA、hostB的主机名解析。（5分）<br>
+9、配置hostA与hostB，使两台主机间可以互相免密登录，创建test1用户，两台主机仅允许普通用户test1在主机网卡所在的网段远程登录，且禁止root远程登录。（10分）<br>
+10、在hostB创建普通用户test2、test3，创建组grouptest，将test2用户和test3用户加入组grouptest，设置用户test2、test3最长密码使用有效期为365天，用户密码到期前，提前收到警告信息的天数为14天。（5分）<br>
+11、在hostB创建目录/sharedir，设置目录属主为root，属组为grouptest，设置目录权限为属主拥有所有权限，属组拥有读写权限，其他人具有只读权限。设置目录可以继承属组，且用户只能删除自己创建的文件，不能删除其他人的文件。（5分）<br>
+12、在hostB配置system journal，将记录永久保存。（5分）<br>
+13、配置hostA与hostB同步阿里云时钟同步服务器。（5分）<br>
+14、将hostB主机中/var/log目录下的所有内容打包，并使用gzip压缩，命名为varlog_bak.tar.gz，并将此tar包发送至hostA主机root用户的家目录。（5分）<br>
+15、使用centos 8-stream的光盘内容配置本地yum仓库，确保可以正常下载软件。（5分）<br>
+16、对各实验各关键部分进行必要说明及基本验证。（10分）</p>
+</div></div><!--#--><!--/--></div><div class="py-2 -mx-4 px-4 transition-colors md:hover:bg-slate/3"><div class="flex gap-3 rounded-lg"><div class="shrink-0 w-7 h-7 mt-4 rounded-full op-80 bg-gradient-to-r from-yellow-200 via-green-200 to-green-300"></div><div class="message prose break-words overflow-hidden"><h2>1. 安装虚拟机</h2>
+<ul>
+<li>安装 VMware Workstation Pro 或 VirtualBox 等虚拟机软件。</li>
+<li>创建新虚拟机，操作系统选择 CentOS 8-Stream。</li>
+<li>配置网卡为 NAT 模式。</li>
+<li>设置内存、CPU 和磁盘大小（例如：内存 4GB、CPU 2 个内核、磁盘 60GB）。</li>
+<li>完成安装后，关闭虚拟机。</li>
+</ul>
+<h2>2. 克隆虚拟机</h2>
+<ul>
+<li>右键单击原始虚拟机，选择“克隆”。</li>
+<li>创建两个克隆虚拟机，命名为 hostA 和 hostB。</li>
+</ul>
+<h2>3. hostA 添加硬盘</h2>
+<ul>
+<li>右键单击 hostA 虚拟机，选择“添加硬盘”。</li>
+<li>选择“新建虚拟磁盘”，大小为 20GB。</li>
+</ul>
+<h2>4. hostA 磁盘分区</h2>
+<p>使用 parted 工具对新硬盘进行分区：</p>
+<div relative="">
+      <div data-code="parted%20%2Fdev%2Fsdb%20%23%20%E6%9B%BF%E6%8D%A2%E4%B8%BA%E5%AE%9E%E9%99%85%E7%9A%84%E6%96%B0%E7%A1%AC%E7%9B%98%E8%AE%BE%E5%A4%87%E5%90%8D%0Amklabel%20gpt%0Amkpart%20primary%20linux-swap%201MiB%202048MiB%0Aset%201%20swap%20on%0Amkpart%20primary%20linux-lvm%202048MiB%206144MiB%0Amkpart%20primary%20linux-lvm%206144MiB%20100%25%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-attribute">parted</span> /dev/sdb # 替换为实际的新硬盘设备名
+<span class="hljs-attribute">mklabel</span> gpt
+<span class="hljs-attribute">mkpart</span> primary linux-swap <span class="hljs-number">1</span>MiB <span class="hljs-number">2048</span>MiB
+<span class="hljs-attribute">set</span> <span class="hljs-number">1</span> swap <span class="hljs-literal">on</span>
+<span class="hljs-attribute">mkpart</span> primary linux-lvm <span class="hljs-number">2048</span>MiB <span class="hljs-number">6144</span>MiB
+<span class="hljs-attribute">mkpart</span> primary linux-lvm <span class="hljs-number">6144</span>MiB <span class="hljs-number">100</span>%
+</code></pre>
+
+      </div><h2>5. hostA 增加交换空间</h2>
+<ul>
+<li>创建交换分区：</li>
+</ul>
+<div relative="">
+      <div data-code="mkswap%20%2Fdev%2Fsdb1%0Aswapon%20%2Fdev%2Fsdb1%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">mkswap <span class="hljs-regexp">/dev/</span>sdb1
+swapon <span class="hljs-regexp">/dev/</span>sdb1
+</code></pre>
+
+      </div><ul>
+<li>配置持久挂载：</li>
+</ul>
+<div relative="">
+      <div data-code="echo%20%22%2Fdev%2Fsdb1%20none%20swap%20defaults%200%200%22%20%3E%3E%20%2Fetc%2Ffstab%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">echo <span class="hljs-string">"/dev/sdb1 none swap defaults 0 0"</span> &gt;&gt; <span class="hljs-regexp">/etc/</span>fstab
+</code></pre>
+
+      </div><h2>6. hostA 创建逻辑卷</h2>
+<ul>
+<li>创建卷组：</li>
+</ul>
+<div relative="">
+      <div data-code="vgcreate%20vg1%20%2Fdev%2Fsdb2%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">vgcreate vg1 <span class="hljs-regexp">/dev/</span>sdb2
+</code></pre>
+
+      </div><ul>
+<li>创建逻辑卷：</li>
+</ul>
+<div relative="">
+      <div data-code="lvcreate%20-n%20lv1%20-L%202G%20vg1%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">l<span class="hljs-attr">vcreate -n lv1</span> -L <span class="hljs-number">2</span>G v<span class="hljs-name">g1</span>
+</code></pre>
+
+      </div><h2>7. hostA 挂载逻辑卷</h2>
+<ul>
+<li>创建挂载目录：</li>
+</ul>
+<div relative="">
+      <div data-code="mkdir%20%2Fmount_dir%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-built_in">mkdir</span> /mount_dir
+</code></pre>
+
+      </div><ul>
+<li>格式化逻辑卷：</li>
+</ul>
+<div relative="">
+      <div data-code="mkfs.xfs%20%2Fdev%2Fvg1%2Flv1%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">mkfs.xfs <span class="hljs-regexp">/dev/</span>vg1/lv1
+</code></pre>
+
+      </div><ul>
+<li>挂载逻辑卷：</li>
+</ul>
+<div relative="">
+      <div data-code="mount%20%2Fdev%2Fvg1%2Flv1%20%2Fmount_dir%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">mount <span class="hljs-regexp">/dev/</span>vg1<span class="hljs-regexp">/lv1 /m</span>ount_dir
+</code></pre>
+
+      </div><ul>
+<li>配置持久挂载：</li>
+</ul>
+<div relative="">
+      <div data-code="echo%20%22%2Fdev%2Fvg1%2Flv1%20%20%20%2Fmount_dir%20%20%20xfs%20%20%20defaults%2Cnofail%20%20%200%20%20%200%22%20%3E%3E%20%2Fetc%2Ffstab%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">echo <span class="hljs-string">"/dev/vg1/lv1   /mount_dir   xfs   defaults,nofail   0   0"</span> &gt;&gt; <span class="hljs-regexp">/etc/</span>fstab
+</code></pre>
+
+      </div><h2>8. hostA 扩容根分区</h2>
+<p>使用 LVM 扩容根分区：</p>
+<ul>
+<li>扩展卷组：</li>
+</ul>
+<div relative="">
+      <div data-code="vgextend%20vg1%20%2Fdev%2Fsdb3%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">vgextend vg1 <span class="hljs-regexp">/dev/</span>sdb3
+</code></pre>
+
+      </div><ul>
+<li>扩展逻辑卷：</li>
+</ul>
+<div relative="">
+      <div data-code="lvextend%20-l%20%2B100%25FREE%20%2Fdev%2Fvg1%2Flv0%20%23%20%E9%80%BB%E8%BE%91%E5%8D%B7%20lv0%20%E4%B8%BA%E6%A0%B9%E5%88%86%E5%8C%BA%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">lvextend -l +<span class="hljs-number">100</span>%FREE <span class="hljs-regexp">/dev/</span>vg1/lv0 <span class="hljs-comment"># 逻辑卷 lv0 为根分区</span>
+</code></pre>
+
+      </div><ul>
+<li>调整文件系统大小：</li>
+</ul>
+<div relative="">
+      <div data-code="xfs_growfs%20%2Fdev%2Fvg1%2Flv0%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">xfs_growfs <span class="hljs-regexp">/dev/</span>vg1/lv0
+</code></pre>
+
+      </div><h2>9. 配置主机名和网络</h2>
+<ul>
+<li>设置主机名：</li>
+</ul>
+<div relative="">
+      <div data-code="hostnamectl%20set-hostname%20server%3C%E5%AD%A6%E5%8F%B7%E5%90%8E%E4%B8%A4%E4%BD%8D%3E%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-string">hostnamectl</span> <span class="hljs-built_in">set-hostname</span> <span class="hljs-string">server</span>&lt;学号后两位&gt;
+</code></pre>
+
+      </div><ul>
+<li>配置网络：</li>
+</ul>
+<div relative="">
+      <div data-code="nmcli%20con%20modify%20eth0%20ipv4.addresses%20192.168.1.100%2F24%0Anmcli%20con%20modify%20eth0%20gateway%20192.168.1.1%0Anmcli%20con%20modify%20eth0%20dns%208.8.8.8%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-attribute">nmcli</span> con modify eth0 ipv4.addresses <span class="hljs-number">192.168.1.100</span>/<span class="hljs-number">24</span>
+<span class="hljs-attribute">nmcli</span> con modify eth0 gateway <span class="hljs-number">192.168.1.1</span>
+<span class="hljs-attribute">nmcli</span> con modify eth0 dns <span class="hljs-number">8.8.8.8</span>
+</code></pre>
+
+      </div><h2>10. 配置主机名解析</h2>
+<ul>
+<li>在 hostA 上创建 /etc/hosts 文件：</li>
+</ul>
+<div relative="">
+      <div data-code="echo%20%22192.168.1.100%20server%3C%E5%AD%A6%E5%8F%B7%E5%90%8E%E4%B8%A4%E4%BD%8D%3E%22%20%3E%3E%20%2Fetc%2Fhosts%0Aecho%20%22192.168.1.200%20client%3C%E5%AD%A6%E5%8F%B7%E5%90%8E%E4%B8%A4%E4%BD%8D%3E%22%20%3E%3E%20%2Fetc%2Fhosts%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">echo <span class="hljs-string">"192.168.1.100 server&lt;学号后两位&gt;"</span> &gt;&gt; <span class="hljs-regexp">/etc/</span>hosts
+echo <span class="hljs-string">"192.168.1.200 client&lt;学号后两位&gt;"</span> &gt;&gt; <span class="hljs-regexp">/etc/</span>hosts
+</code></pre>
+
+      </div><h2>11. 配置免密登录</h2>
+<ul>
+<li>在 hostA 上创建用户 test1：</li>
+</ul>
+<div relative="">
+      <div data-code="useradd%20test1%0Apasswd%20test1%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-attribute">useradd</span> test1
+passwd test1
+</code></pre>
+
+      </div><ul>
+<li>生成密钥对：</li>
+</ul>
+<div relative="">
+      <div data-code="ssh-keygen%20-t%20rsa%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-attribute">ssh-keygen -t rsa</span>
+</code></pre>
+
+      </div><ul>
+<li>复制公钥到 hostB 上：</li>
+</ul>
+<div relative="">
+      <div data-code="ssh-copy-id%20-o%20StrictHostKeyChecking%3Dno%20test1%40192.168.1.200%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">ssh-<span class="hljs-keyword">copy</span>-<span class="hljs-built_in">id</span> -o StrictHostKeyChecking=no test1@<span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.200</span>
+</code></pre>
+
+      </div><ul>
+<li>限制远程登录用户：</li>
+</ul>
+<div relative="">
+      <div data-code="sed%20-i%20&#39;%2FPermitRootLogin%2Fs%2F%5E.*%24%2FPermitRootLogin%20no%2F&#39;%20%2Fetc%2Fssh%2Fsshd_config%0Ased%20-i%20&#39;%2FAllowUsers%2Fs%2F%5E.*%24%2FAllowUsers%20test1%2F&#39;%20%2Fetc%2Fssh%2Fsshd_config%0Asystemctl%20restart%20sshd%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">sed -i <span class="hljs-string">'/PermitRootLogin/s/^.*$/PermitRootLogin no/'</span> <span class="hljs-regexp">/etc/</span>ssh/sshd_config
+sed -i <span class="hljs-string">'/AllowUsers/s/^.*$/AllowUsers test1/'</span> <span class="hljs-regexp">/etc/</span>ssh/sshd_config
+systemctl restart sshd
+</code></pre>
+
+      </div><h2>12. hostB 创建用户和组</h2>
+<ul>
+<li>创建用户 test2 和 test3：</li>
+</ul>
+<div relative="">
+      <div data-code="useradd%20test2%0Apasswd%20test2%0Auseradd%20test3%0Apasswd%20test3%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-attribute">useradd</span> test2
+passwd test2
+useradd test3
+passwd test3
+</code></pre>
+
+      </div><ul>
+<li>创建组 grouptest：</li>
+</ul>
+<div relative="">
+      <div data-code="groupadd%20grouptest%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-attribute">groupadd grouptest</span>
+</code></pre>
+
+      </div><ul>
+<li>将用户添加到组：</li>
+</ul>
+<div relative="">
+      <div data-code="usermod%20-aG%20grouptest%20test2%0Ausermod%20-aG%20grouptest%20test3%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-attribute">usermod</span> -aG grouptest test2
+usermod -aG grouptest test3
+</code></pre>
+
+      </div><ul>
+<li>设置密码过期策略：</li>
+</ul>
+<div relative="">
+      <div data-code="chage%20-M%20365%20test2%0Achage%20-W%2014%20test2%0Achage%20-M%20365%20test3%0Achage%20-W%2014%20test3%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-attribute">chage</span> -M <span class="hljs-number">365</span> test2
+<span class="hljs-attribute">chage</span> -W <span class="hljs-number">14</span> test2
+<span class="hljs-attribute">chage</span> -M <span class="hljs-number">365</span> test3
+<span class="hljs-attribute">chage</span> -W <span class="hljs-number">14</span> test3
+</code></pre>
+
+      </div><h2>13. hostB 配置目录权限</h2>
+<ul>
+<li>创建目录 /sharedir：</li>
+</ul>
+<div relative="">
+      <div data-code="mkdir%20%2Fsharedir%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-built_in">mkdir</span> /sharedir
+</code></pre>
+
+      </div><ul>
+<li>设置目录权限：</li>
+</ul>
+<div relative="">
+      <div data-code="chown%20root%3Agrouptest%20%2Fsharedir%0Achmod%20750%20%2Fsharedir%0Asetfacl%20-m%20u%3Atest2%3Arwx%20%2Fsharedir%0Asetfacl%20-m%20g%3Agrouptest%3Arw%20%2Fsharedir%0Asetfacl%20-m%20o%3A%3Ar%20%2Fsharedir%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs"><span class="hljs-built_in">chown</span> root:grouptest /sharedir
+<span class="hljs-built_in">chmod</span> 750 /sharedir
+setfacl -m u:test2:rwx /sharedir
+setfacl -m g:grouptest:rw /sharedir
+setfacl -m o::r /sharedir
+</code></pre>
+
+      </div><ul>
+<li>设置目录继承属组和文件删除限制：</li>
+</ul>
+<div relative="">
+      <div data-code="setfacl%20-d%20-m%20g%3Agrouptest%3Arwx%20%2Fsharedir%0Asetfacl%20-d%20-m%20u%3Atest2%3Arwx%20%2Fsharedir%2F%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">setfacl -d -m g:grouptest:rwx /sharedir
+setfacl -d -m u:test2:rwx <span class="hljs-regexp">/sharedir/</span>
+</code></pre>
+
+      </div><h2>14. hostB 配置 systemd journal</h2>
+<ul>
+<li>配置 systemd journal 永久保存：</li>
+</ul>
+<div relative="">
+      <div data-code="sed%20-i%20&#39;%2FStorage%2Fs%2F%5E.*%24%2FStorage%3Dpersistent%2F&#39;%20%2Fetc%2Fsystemd%2Fjournald.conf%0Asystemctl%20restart%20systemd-journald%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">sed -i <span class="hljs-string">'/Storage/s/^.*$/Storage=persistent/'</span> /etc/<span class="hljs-params">system</span>d/journald.conf
+<span class="hljs-params">system</span>ctl restart <span class="hljs-params">system</span>d-journald
+</code></pre>
+
+      </div><h2>15. hostA 与 hostB 同步阿里云时间服务器</h2>
+<ul>
+<li>安装 chrony：</li>
+</ul>
+<div relative="">
+      <div data-code="yum%20install%20chrony%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">yum <span class="hljs-keyword">install</span> chrony
+</code></pre>
+
+      </div><ul>
+<li>配置 chrony：</li>
+</ul>
+<div relative="">
+      <div data-code="sed%20-i%20&#39;s%2F%5E.*pool.*%2Fpool%20ntp.aliyun.com%20iburst%20maxsources%204%2F&#39;%20%2Fetc%2Fchrony.conf%0Asystemctl%20restart%20chronyd%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">sed -i <span class="hljs-string">'s/^.*pool.*/pool ntp.aliyun.com iburst maxsources 4/'</span> <span class="hljs-regexp">/etc/</span>chrony.conf
+systemctl restart chronyd
+</code></pre>
+
+      </div><h2>16. hostB 备份并发送至 hostA</h2>
+<ul>
+<li>备份 /var/log 目录：</li>
+</ul>
+<div relative="">
+      <div data-code="tar%20-czvf%20varlog_bak.tar.gz%20%2Fvar%2Flog%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">tar -czvf varlog_bak.tar.gz /<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>
+</code></pre>
+
+      </div><ul>
+<li>发送备份文件至 hostA：</li>
+</ul>
+<div relative="">
+      <div data-code="scp%20varlog_bak.tar.gz%20root%40192.168.1.100%3A%2Froot%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">scp varlog_bak.tar.gz root<span class="hljs-variable">@192</span>.<span class="hljs-number">168.1</span>.<span class="hljs-number">100</span><span class="hljs-symbol">:/root</span>
+</code></pre>
+
+      </div><h2>17. 配置本地 yum 仓库</h2>
+<ul>
+<li>挂载光盘镜像：</li>
+</ul>
+<div relative="">
+      <div data-code="mount%20-o%20loop%20%2Fpath%2Fto%2FCentOS-8-Stream-x86_64-dvd1.iso%20%2Fmnt%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">mount -o loop <span class="hljs-regexp">/path/</span>to<span class="hljs-regexp">/CentOS-8-Stream-x86_64-dvd1.iso /m</span>nt
+</code></pre>
+
+      </div><ul>
+<li>创建本地仓库：</li>
+</ul>
+<div relative="">
+      <div data-code="yum%20install%20createrepo%0Acreaterepo%20%2Fmnt%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">yum install createrepo
+createrepo /mnt
+</code></pre>
+
+      </div><ul>
+<li>配置 yum 源：</li>
+</ul>
+<div relative="">
+      <div data-code="vi%20%2Fetc%2Fyum.repos.d%2Flocalrepo.repo%0A%5Blocalrepo%5D%0Aname%3DLocal%20CentOS-8-Stream%20Repository%0Abaseurl%3Dfile%3A%2F%2F%2Fmnt%0Aenabled%3D1%0Agpgcheck%3D0%0A" class="copy-btn gpt-copy-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg>
+            <div class="group-hover:op-100 gpt-copy-tips">
+              Copy
+            </div>
+      </div>
+      <pre><code class="hljs">vi /etc/yum.repos.d/localrepo.repo
+[localrepo]
+<span class="hljs-attribute">name</span>=Local CentOS-8-Stream Repository
+<span class="hljs-attribute">baseurl</span>=file:///mnt
+<span class="hljs-attribute">enabled</span>=1
+<span class="hljs-attribute">gpgcheck</span>=0
+</code></pre>
+
+      </div></div></div><!--#--><div class="fie px-3 mb-2"><div class="gpt-retry-btn"><!--#--><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path d="M25.95 7.65l.005-.004c-.092-.11-.197-.206-.293-.312c-.184-.205-.367-.41-.563-.603c-.139-.136-.286-.262-.43-.391c-.183-.165-.366-.329-.558-.482c-.16-.128-.325-.247-.49-.367c-.192-.14-.385-.277-.585-.406a13.513 13.513 0 0 0-.533-.324q-.308-.179-.625-.341c-.184-.094-.37-.185-.56-.27c-.222-.1-.449-.191-.678-.28c-.19-.072-.378-.145-.571-.208c-.246-.082-.498-.15-.75-.217c-.186-.049-.368-.102-.556-.143c-.29-.063-.587-.107-.883-.15c-.16-.023-.315-.056-.476-.073A12.933 12.933 0 0 0 6 7.703V4H4v8h8v-2H6.811A10.961 10.961 0 0 1 16 5a11.111 11.111 0 0 1 1.189.067c.136.015.268.042.403.061c.25.037.501.075.746.128c.16.035.315.08.472.121c.213.057.425.114.633.183c.164.054.325.116.486.178c.193.074.384.15.57.235c.162.072.32.15.477.23q.268.136.526.286c.153.09.305.18.453.276c.168.11.33.224.492.342c.14.102.282.203.417.312c.162.13.316.268.47.406c.123.11.248.217.365.332c.167.164.323.338.479.512A10.993 10.993 0 1 1 5 16H3a13 13 0 1 0 22.95-8.35z" fill="currentColor"></path></svg><!--/--><span>Regenerate</span></div></div><!--/--></div><!--/--><!--#--><!--/--><!--#--><!--/--><!--#--><div class="gen-text-wrapper"><textarea placeholder="Enter something..." autocomplete="off" autofocus="" rows="1" class="gen-textarea"></textarea><button gen-slate-btn="">Send</button><button title="Clear" gen-slate-btn=""><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8 20v-5h2v5h9v-7H5v7h3zm-4-9h16V8h-6V4h-4v4H4v3zM3 21v-8H2V7a1 1 0 0 1 1-1h5V3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3h5a1 1 0 0 1 1 1v6h-1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path></svg></button></div><!--/--><div class="fixed bottom-5 left-5 rounded-md hover:bg-slate/10 w-fit h-fit transition-colors active:scale-90 "><div><button class="p-2.5 text-base" title="stick to bottom" type="button"><div i-ph-arrow-line-down-bold=""></div></button></div></div></div></astro-island>
+    <footer>
+  <p mt-8="" text-xs="" op-30="">
+    <a b-slate-link="" href="https://github.com/babaohuang/GeminiProChat" target="_blank">
+      Made by babaohuang
+    </a>
+  </p>
+</footer>
+  </main>
+
+
+
+</body></html>
